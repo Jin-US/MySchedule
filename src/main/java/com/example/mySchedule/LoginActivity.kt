@@ -1,11 +1,11 @@
-package com.example.lj.myschedule
+package com.example.mySchedule;
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.R
+import com.example.mySchedule.R
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +13,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         val registerButton = findViewById<View>(R.id.registerButton) as TextView
         registerButton.setOnClickListener {
-            val registerIntent = Intent(this@LoginActivity, Register_activity::class.java)
+            val registerIntent = Intent(this@LoginActivity, RegisterActivity::class.java)
             this@LoginActivity.startActivity(registerIntent)
         }
         val loginButton = findViewById<View>(R.id.loginButton) as TextView

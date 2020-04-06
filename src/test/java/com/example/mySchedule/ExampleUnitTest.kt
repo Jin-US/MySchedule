@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.mySchedule
 
 import org.junit.Test
 
