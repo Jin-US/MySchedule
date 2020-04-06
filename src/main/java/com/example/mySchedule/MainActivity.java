@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 settingButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment, new timeFlag());
+                fragmentTransaction.replace(R.id.fragment, new TimeFlag());
                 fragmentTransaction.commit();
             }
         });
