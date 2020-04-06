@@ -48,11 +48,26 @@ public class MainActivity extends AppCompatActivity {
         final LinearLayout notice = (LinearLayout) findViewById(R.id.notice);
 
 
-        timeButton.setOnClickListener(new View.OnClickListener() {
+        listButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 notice.setVisibility(View.GONE);
                 listButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                timeButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                settingButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment, new TimeFlag());
+                fragmentTransaction.commit();
+            }
+        });
+
+
+        timeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notice.setVisibility(View.GONE);
+                listButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 timeButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 settingButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 FragmentManager fragmentManager = getSupportFragmentManager();
